@@ -73,7 +73,9 @@
     //   setupViewerForImJoy(container)
     // } else {
     const viewer = itkVtkViewer.processURLParameters(container, {
-      fullscreen: true
+      fullscreen: true,
+      rotate: false,
+      gradientOpacity: 0.3,
     });
     if (!viewer) {
       itkVtkViewer.createViewerFromLocalFiles(container)

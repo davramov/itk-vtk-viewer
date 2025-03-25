@@ -108,7 +108,7 @@
   font-size: 0.9em;
   font-family: monospace;
   border-radius: 3px;
-  background: rgba(0.9, 0.9, 0.9, 0.95);
+  background: rgba(245, 206, 206, 0.95);
   color: white;
   opacity: 0;
   transform: translate(15px, -50%);

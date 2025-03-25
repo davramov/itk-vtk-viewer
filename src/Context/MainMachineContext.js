@@ -22,7 +22,8 @@ class MainMachineContext {
   }
 
   // Background color of the renderer
-  backgroundColor = [0.5, 0.5, 0.5]
+  backgroundColor = [51 / 255, 66 / 255, 86 / 255]
+  // [0.5, 0.5, 0.5]
 
   // Background colors to step through when clicking the background color
   // button
@@ -30,10 +31,11 @@ class MainMachineContext {
     [0.5, 0.5, 0.5],
     [0, 0, 0],
     [1, 1, 1],
+    [51 / 255, 66 / 255, 86 / 255],
   ]
 
   // Index of the selected background color from the backgroundColors
-  selectedBackgroundColor = 0
+  selectedBackgroundColor = 3
 
   // Is fullscreen mode enabled?
   fullscreenEnabled = false
