@@ -6,7 +6,9 @@ import { computeRenderedBounds } from '../Main/computeRenderedBounds'
 import { worldBoundsToIndexBounds } from '../../../IO/MultiscaleSpatialImage'
 import componentTypeToTypedArray from '../../../IO/componentTypeToTypedArray'
 
-export const RENDERED_VOXEL_MAX = 512 * 512 * 512 * 2
+// export const RENDERED_VOXEL_MAX = 512 * 512 * 512 * 2
+export const RENDERED_VOXEL_MAX = 1024 * 1024 * 1024 * 2
+
 const RENDERED_IMAGE_BYTES_MAX = RENDERED_VOXEL_MAX * 2 // 2 byte pixel type = 1073741824
 
 const getVoxelCount = async (image, bounds, scale) => {
