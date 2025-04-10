@@ -69,16 +69,18 @@
 
     const container = document.querySelector('.content');
     // inside an iframe
-    if (window.self !== window.top) {
-      setupViewerForImJoy(container)
-    } else {
-      const viewer = itkVtkViewer.processURLParameters(container, {
-        fullscreen: true
-      });
-      if (!viewer) {
-        itkVtkViewer.createViewerFromLocalFiles(container)
-      }
+    // if (window.self !== window.top) {
+    //   setupViewerForImJoy(container)
+    // } else {
+    const viewer = itkVtkViewer.processURLParameters(container, {
+      fullscreen: true,
+      rotate: false,
+      gradientOpacity: 0.3,
+    });
+    if (!viewer) {
+      itkVtkViewer.createViewerFromLocalFiles(container)
     }
+    // }
   </script>
   </body>
 </html>
