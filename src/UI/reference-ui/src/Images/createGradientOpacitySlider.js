@@ -16,7 +16,7 @@ function createGradientOpacitySlider(context, uiContainer) {
       <input type="range" min="0" max="0.99" value="0.5" step="0.01" id="${context.id}-gradientOpacityScaleSlider" />
     </div>
 
-    <input type="range" min="0" max="1" value="0.2" step="0.01" orient="vertical"
+    <input type="range" min="0" max="1" value="0.01" step="0.01" orient="vertical"
       id="${context.id}-gradientOpacitySlider"
       class="${style.slider}" />`
   const sliderEntryDiv = sliderEntry.children[0]

@@ -6,7 +6,7 @@ import applyContrastSensitiveStyle from '../applyContrastSensitiveStyle'
 import opacityIcon from '../icons/opacity.svg'
 
 function createGeometryOpacitySlider(store, geometryColorRow) {
-  const defaultGeometryOpacity = 1.0
+  const defaultGeometryOpacity = 0.01
 
   const sliderEntry = document.createElement('div')
   sliderEntry.setAttribute('class', style.sliderEntry)

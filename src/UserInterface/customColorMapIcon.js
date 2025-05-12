@@ -5,7 +5,7 @@ canvas.setAttribute('width', width)
 canvas.setAttribute('height', height)
 
 function customColorMapIcon(colorTransferFunction, range) {
-  const ctx = canvas.getContext('2d')
+  const ctx = canvas.getContext('2d', { willReadFrequently: true })
 
   const rgba = colorTransferFunction.getUint8Table(range[0], range[1], width, 4)
   const pixelsArea = ctx.getImageData(0, 0, width, 256)

@@ -109,7 +109,7 @@ test('Test createViewer', async t => {
   testUIMachineActions.createInterface = testCreateInterface
   uiMachineOptions.actions = testUIMachineActions
 
-  const GRADIENT_OPACITY = 0.1
+  const GRADIENT_OPACITY = 0.05
   const viewer = await createViewer(viewerContainer, {
     image: itkImage,
     labelImage: itkLabelImage,
@@ -320,10 +320,10 @@ test('Test createViewer', async t => {
     viewer.once('imageGradientOpacityChanged', () => {
       t.pass('imageGradientOpacityChanged event')
     })
-    viewer.setImageGradientOpacity(0.5)
+    viewer.setImageGradientOpacity(0.01)
     const resultImageGradientOpacity = viewer.getImageGradientOpacity()
     t.same(resultImageGradientOpacity, 0.5, 'image gradient opacity')
-    viewer.setImageGradientOpacity(0.3)
+    viewer.setImageGradientOpacity(0.01)
 
     viewer.once('imageGradientOpacityScaleChanged', () => {
       t.pass('imageGradientOpacityScaleChanged event')
@@ -331,7 +331,7 @@ test('Test createViewer', async t => {
     viewer.setImageGradientOpacityScale(0.8)
     const resultImageGradientOpacityScale = viewer.getImageGradientOpacityScale()
     t.same(resultImageGradientOpacityScale, 0.8, 'image gradient opacity scale')
-    viewer.setImageGradientOpacity(0.5)
+    viewer.setImageGradientOpacity(0.01)
 
     viewer.once('xSliceChanged', () => {
       t.pass('xSliceChanged event')
@@ -363,10 +363,10 @@ test('Test createViewer', async t => {
     viewer.once('imageVolumeSampleDistanceChanged', () => {
       t.pass('imageVolumeSampleDistanceChanged event')
     })
-    viewer.setImageVolumeSampleDistance(0.5)
+    viewer.setImageVolumeSampleDistance(1.0)
     const resultImageVolumeSampleDistance = viewer.getImageVolumeSampleDistance()
     t.same(resultImageVolumeSampleDistance, 0.5, 'volume sample distance')
-    viewer.setImageVolumeSampleDistance(0.25)
+    viewer.setImage(0.25)
 
     viewer.once('imageBlendModeChanged', () => {
       t.pass('imageBlendModeChanged event')

@@ -10,7 +10,7 @@ function createSampleDistanceSlider(context, uiContainer) {
     <div itk-vtk-tooltip itk-vtk-tooltip-top-screenshot itk-vtk-tooltip-content="Volume sample distance" class="${style.sampleDistanceButton}">
       <img src="${sampleDistanceIconDataUri}" alt="sample distance" />
     </div>
-    <input type="range" min="0" max="1" value="0.25" step="0.01"
+    <input type="range" min="0" max="1" value="1.0" step="0.01"
       class="${style.slider} ${context.id}-spacing" />`
   const spacingElement = sliderEntry.querySelector(`.${context.id}-spacing`)
   const spacingDiv = sliderEntry.children[0]

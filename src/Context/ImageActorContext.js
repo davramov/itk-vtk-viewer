@@ -88,13 +88,13 @@ class ImageActorContext {
   shadowEnabled = true
 
   // Gradient opacity weight in the volume rendering
-  gradientOpacity = 0.5
+  gradientOpacity = 0.01
 
   // Gradient opacity scale in the volume rendering
   gradientOpacityScale = 0.5
 
   // Distance in depth samples for the volume rendering
-  volumeSampleDistance = 0.2
+  volumeSampleDistance = 1.0
 
   // Volume rendering blend mode
   blendMode = 'Composite'
