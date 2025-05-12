@@ -13,7 +13,7 @@ function createGradientOpacitySlider(context, uiContainer) {
       <img src="${gradientIconDataUri}" alt="gradient opacity"/>
     </div>
     <div class="${style.gradientOpacityScale}" style="display: none;">
-      <input type="range" min="0" max="0.99" value="0.5" step="0.01" id="${context.id}-gradientOpacityScaleSlider" />
+      <input type="range" min="0" max="0.99" value="0.1" step="0.01" id="${context.id}-gradientOpacityScaleSlider" />
     </div>
 
     <input type="range" min="0" max="1" value="0.01" step="0.01" orient="vertical"

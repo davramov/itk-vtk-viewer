@@ -44,7 +44,20 @@ export default function createRenderer(context) {
   if (context.renderWindow.setMultiSamples) {
     context.renderWindow.setMultiSamples(0);
   }
-
+  context.service.send({
+    type: 'IMAGE_GRADIENT_OPACITY_SCALE_CHANGED',
+    data: {
+      name: context.images.selectedName,
+      gradientOpacityScale: Number(0.1),
+    },
+  })
+  context.service.send({
+    type: 'IMAGE_GRADIENT_OPACITY_CHANGED',
+    data: {
+      name: context.images.selectedName,
+      gradientOpacity: Number(0.01),
+    },
+  })
   // ensure a known camera pose
   const renderer = context.itkVtkView.getRenderer();
   renderer.resetCamera();
@@ -56,6 +69,8 @@ export default function createRenderer(context) {
   if (!volumeActor) {
     console.warn('[createRenderer] No volume actor found; head-lock disabled.');
   }
+
+  
 
   // ——— 3) WebXR setup ———
   const glRenderWindow = context.itkVtkView.getOpenGLRenderWindow();

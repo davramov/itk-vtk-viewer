@@ -91,7 +91,7 @@ class ImageActorContext {
   gradientOpacity = 0.01
 
   // Gradient opacity scale in the volume rendering
-  gradientOpacityScale = 0.5
+  gradientOpacityScale = 0.1
 
   // Distance in depth samples for the volume rendering
   volumeSampleDistance = 1.0

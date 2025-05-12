@@ -322,15 +322,15 @@ test('Test createViewer', async t => {
     })
     viewer.setImageGradientOpacity(0.01)
     const resultImageGradientOpacity = viewer.getImageGradientOpacity()
-    t.same(resultImageGradientOpacity, 0.5, 'image gradient opacity')
+    t.same(resultImageGradientOpacity, 0.01, 'image gradient opacity')
     viewer.setImageGradientOpacity(0.01)
 
     viewer.once('imageGradientOpacityScaleChanged', () => {
       t.pass('imageGradientOpacityScaleChanged event')
     })
-    viewer.setImageGradientOpacityScale(0.8)
+    viewer.setImageGradientOpacityScale(0.1)
     const resultImageGradientOpacityScale = viewer.getImageGradientOpacityScale()
-    t.same(resultImageGradientOpacityScale, 0.8, 'image gradient opacity scale')
+    t.same(resultImageGradientOpacityScale, 0.1, 'image gradient opacity scale')
     viewer.setImageGradientOpacity(0.01)
 
     viewer.once('xSliceChanged', () => {
